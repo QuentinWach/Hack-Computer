@@ -10,5 +10,6 @@ This projects is based on the book [_Elements of Computing Systems_](https://www
 4. [Machine Language](docs/4_Machine_Language.md). This is where we'll write our first little program making use of the components we defined up to this point.
 5. [Computer Architecture](docs/5_Computer_Architecture.md). We'll then finally put everything together, designing the whole hardware architecture of the computer containing, memory, instruction memory, and the CPU.
 6. [Assembler](docs/6_Assembler.md). Finally, we'll write some Assembly for this computer concluding in an implementation of the game _Pong_.
+7. [Conclusion](docs/7_Conclusion.md). Some concluding thoughts, ideas for the future, tips, and useful references.
 
 
