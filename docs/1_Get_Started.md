@@ -40,14 +40,7 @@ initial
 endmodule
 ```
 
-This module simply prints out the classic "Hello World!". Great! Now let's make a new one which actually has some logic, like XOR:
-
-```verilog
-module xor(input A, input B, out C)
-
-
-endmodule
-```
+This module simply prints out the classic "Hello World!". Great! 
 
 **Step 2**. We compile the `.v` file using Icarus:
 
