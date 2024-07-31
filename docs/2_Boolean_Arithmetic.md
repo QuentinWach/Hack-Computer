@@ -63,7 +63,7 @@ endmodule
 endmodule
 ```
 ## Arithmetic Logic Unit (ALU)
-This ALU is specifically designed for the HACK computer. It has six 1-bit control inputs that determine the operation:
+This ALU is specifically designed for the HACK computer and can perform 18 different operations based on the 6 1-bit control bits, which are encoded in the HACK machine language instructions:
 
 ```
 zx: Zero the x input
@@ -78,52 +78,54 @@ It also has two status outputs:
 zr: Set to 1 if the output is zero
 ng: Set to 1 if the output is negative (MSB is 1)
 ```
-The ALU performs operations in stages according to the control bits, allowing for a variety of computations using different combinations of these bits.
+The ALU performs operations in stages according to the control bits, allowing for a variety of computations using different combinations of these bits. I heavily commented this code to explain it:
 ```Verilog
-module alu #(parameter WIDTH = 8)(
-    input [WIDTH-1:0] a, b,
-    input [2:0] op,
-    output reg [WIDTH-1:0] result,
-    output zero, overflow
+module alu(
+    // This declares the ALU module with its inputs and outputs. The HACK ALU
+    // operates on 16-bit numbers (x and y) and has 6 control bits (zx, nx, zy,
+    // ny, f, no) that determine its operation. 
+    // It outputs a 16-bit result (out) and two status flags (zr and ng).
+    input [15:0] x, y,              // 16-bit inputs
+    input zx, nx, zy, ny, f, no,    // 1-bit inputs
+    output [15:0] out,              // 16-bit output
+    output zr, ng                   // 1-bit outputs
+
 );
-    wire [WIDTH-1:0] add_result, sub_result, and_result, or_result, xor_result, inc_result;
-    wire add_overflow, sub_overflow, inc_overflow;
+    // These are internal wires used to connect the different stages of the ALU.
+    wire [15:0] x1, y1, x2, y2, and_out, add_out, mux_out;
+
+    // Stage 1: Zero inputs
+    // If zx is 1, x1 becomes 0, otherwise it's x. Same for y and zy. 
+    // This implements the "zero" functionality of the HACK ALU.
+    assign x1 = zx ? 16'b0 : x;
+    assign y1 = zy ? 16'b0 : y;
+
+    // Stage 2: Negate inputs
+    // If nx is 1, x2 becomes the bitwise NOT of x1, otherwise it's x1. 
+    // Same for y2 and ny. This implements the "negate" functionality.
+    assign x2 = nx ? ~x1 : x1;
+    assign y2 = ny ? ~y1 : y1;
+
+    // Stage 3: AND / ADD
+    // This performs both AND and ADD operations on x2 and y2. 
+    // The HACK ALU always computes both, then selects one based on the f bit.
+    assign and_out = x2 & y2;
+    adder add(.a(x2), .b(y2), .out(add_out));
+
+    // Stage 4: Choose function
+    // If f is 1, the output is the result of addition. 
+    // If f is 0, it's the result of AND.
+    assign mux_out = f ? add_out : and_out;
+
+    // Stage 5: Negate output
+    // If no is 1, the output is negated (bitwise NOT).
+    assign out = no ? ~mux_out : mux_out;
+
+    // Set zero and negative flags
+    // zr is set to 1 if the output is zero. 
+    // ng is set to 1 if the output is negative (most significant bit is 1).
+    assign zr = (out == 16'b0);
+    assign ng = out[15];
     
-    adder #(WIDTH) add_op(
-        .a(a), .b(b), .cin(1'b0),
-        .sum(add_result), .cout(add_overflow)
-    );
-    
-    adder #(WIDTH) sub_op(
-        .a(a), .b(~b), .cin(1'b1),
-        .sum(sub_result), .cout(sub_overflow)
-    );
-    
-    incrementer #(WIDTH) inc_op(
-        .a(a),
-        .result(inc_result),
-        .overflow(inc_overflow)
-    );
-    
-    assign and_result = a & b;
-    assign or_result = a | b;
-    assign xor_result = a ^ b;
-    
-    always @(*) begin
-        case (op)
-            3'b000: result = add_result;
-            3'b001: result = sub_result;
-            3'b010: result = and_result;
-            3'b011: result = or_result;
-            3'b100: result = xor_result;
-            3'b101: result = inc_result;
-            default: result = {WIDTH{1'b0}};
-        endcase
-    end
-    
-    assign zero = (result == {WIDTH{1'b0}});
-    assign overflow = (op == 3'b000) ? add_overflow :
-                      (op == 3'b001) ? sub_overflow :
-                      (op == 3'b101) ? inc_overflow : 1'b0;
 endmodule
 ```
