@@ -2,6 +2,9 @@ Let's build up the individual modules which are typical for ALUs within CPUs, st
 
 ## Half-Adder
 A half-adder is a digital circuit that adds two single binary digits and produces a sum and a carry. The sum is the XOR of the inputs, while the carry is the AND of the inputs.
+
+![](2_Half_Adder.jpg)
+
 ```Verilog
 module half_adder(
     input a, b,
