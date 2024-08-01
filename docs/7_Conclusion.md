@@ -10,3 +10,6 @@ Since there are so many other people who have already done quite similar project
 + .gds Layout
 + TinyTapeout
 + FPGA tests
++ High resolution graphics to emulate a really cool retro game
+  + Flappy Bird!
+  + Fluid Simulation?
