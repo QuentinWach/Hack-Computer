@@ -3,7 +3,7 @@ The following building blocks, when combined with the ALU and other components, 
 + The D Flip-Flop (DFF) forms the basis for all memory elements.
 + The 1-Bit Register is used to construct larger memory units.
 + RAM8 and the parameterized RAM are used for data storage.
-+ And the Counter is used as the program counter in the CPU.
++ And the Counter is used as the program counter in the CPU, like a clock.
 
 ## DFF
 The DFF stores a single bit. On each positive edge of the clock signal, it updates its output q with the value of the input d.
