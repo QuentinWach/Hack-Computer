@@ -1,4 +1,4 @@
-Let's build up the individual modules which are typical for ALUs within CPUs, step-by-step. 😊 Note that the HACK architecture is extremely simplified. If you do some research and compare the Verilog I show below to that of other designs, you'll quickly notice the simplicity.
+Let's build up the individual modules which are typical for ALUs within CPUs, step-by-step. 😊 Note that the HACK architecture is extremely simplified. Compare the Verilog I show below to that of other designs and you'll quickly notice the simplicity.
 
 ## Half-Adder
 A half-adder is a digital circuit that adds two single binary digits and produces a sum and a carry. The sum is the XOR of the inputs, while the carry is the AND of the inputs.
@@ -126,6 +126,6 @@ module alu(
     // ng is set to 1 if the output is negative (most significant bit is 1).
     assign zr = (out == 16'b0);
     assign ng = out[15];
-    
+
 endmodule
 ```
