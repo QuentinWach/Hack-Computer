@@ -16,6 +16,9 @@ endmodule
 ```
 ## Full-Adder
 A full-adder adds three single binary digits (two inputs and one carry-in) and produces a sum and a carry-out. It's implemented using two half-adders and an OR gate.
+
+![](2_Full_Adder.jpg)
+
 ```Verilog
 module full_adder(
     input a, b, cin,
