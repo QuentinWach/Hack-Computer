@@ -6,6 +6,8 @@ Since there are so many other people who have already done quite similar project
 + Compiler
 + Operating System
 + Running Doom?
++ Hardware emulator.
++ Compiler to code and run games on it in C or Python?
 ### Hardware
 + .gds Layout
 + TinyTapeout
