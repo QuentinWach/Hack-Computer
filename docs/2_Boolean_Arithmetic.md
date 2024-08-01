@@ -35,6 +35,7 @@ endmodule
 
 ## Adder
 This is a 16-bit adder chaining 16 full-adders without carry-in or carry-out, as per HACK specifications. It's used in the ALU for addition operations.
+
 ```Verilog
 module adder(
     input [15:0] a, b,
