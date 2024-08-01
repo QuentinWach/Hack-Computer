@@ -1,4 +1,6 @@
-Let's build up the individual modules which are typical for ALUs within CPUs, step-by-step. 😊 Note that the HACK architecture is extremely simplified. Compare the Verilog I show below to that of other designs and you'll quickly notice the simplicity.
+Let's build up the individual modules which are typical for ALUs within CPUs, step-by-step. Note that the HACK architecture is extremely simplified. Compare the Verilog I show below to that of other designs and you'll quickly notice the simplicity.
+
+Open the `2_Boolean_Arithmetic.circ` Logisim file from the modules directory to try out and experiment with the circuits I present here.
 
 ## Half-Adder
 A half-adder is a digital circuit that adds two single binary digits and produces a sum and a carry. The sum is the XOR of the inputs, while the carry is the AND of the inputs.
@@ -34,7 +36,9 @@ endmodule
 ```
 
 ## Adder
-This is a 16-bit adder chaining 16 full-adders without carry-in or carry-out, as per HACK specifications. It's used in the ALU for addition operations.
+This is a 16-bit adder chaining 16 full-adders without carry-in or carry-out, as per HACK specifications. It's used in the ALU for addition operations. To illustrate the principle of how the half-adders are wired up, below is an image of a 3-bit adder I created in Logisim:
+
+![](2_3_Bit_Adder.jpg)
 
 ```Verilog
 module adder(
@@ -58,8 +62,15 @@ module adder(
     endgenerate
 endmodule
 ```
+Oh, what the heck. You know what? Here is the 16-Bit adder in its full glory as well:
+![](2_16_Bit_Adder.jpg)
+
 ## Incrementer
-A simple 16-bit incrementer.
+A simple 16-bit incrementer. Here, `out = in + 16'd1` assigns the result of `in + 16'd1` to the output out where...
++ `in`: The 16-bit input vector.
++ `16'd1`: A 16-bit representation of the decimal number 1. The d indicates that the value is in decimal. It is explicitly specified as 16-bit wide to match the width of the input and output vectors.
++ And hence `in + 16'd1` performs an addition of the input value with the constant value 1. 
+
 ```Verilog
 module incrementer(
     input [15:0] in,
@@ -67,8 +78,13 @@ module incrementer(
 );
     assign out = in + 16'd1;
 endmodule
-endmodule
 ```
+This seems rather simple to implement in Logisim. For example, we may use a 16-Bit adder and simply add 1 with the carry-in bit. Or add one with the second 16-bit number. But this is overly complex as we are essentially wasting 15 input bits and hence also all of the half-adders that would add those two inputs a and b together!
+
+Instead, half-adders to the rescue!
+
+![](2_Incrementer.jpg)
+
 ## Arithmetic Logic Unit (ALU)
 This ALU is specifically designed for the HACK computer and can perform 18 different operations based on the 6 1-bit control bits, which are encoded in the HACK machine language instructions:
 
