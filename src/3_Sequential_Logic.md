@@ -8,7 +8,9 @@ The following building blocks, when combined with the ALU and other components, 
 ## DFF
 The DFF stores a single bit. On each positive edge of the clock signal, it updates its output q with the value of the input d. Here is a Logisim implementation showing how we can actually store information. From here on out, I will focus on just the Verilog though.
 
-![](3_Flip_Flop.jpg)
+|![](3_Flip_Flop.jpg)|
+| :-: |
+|A flip-flop circuit storing a bit created in Logisim.|
 
 ```Verilog
 module DFF(

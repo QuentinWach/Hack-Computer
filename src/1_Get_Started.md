@@ -5,7 +5,6 @@
 _"On the one hand, the Hack [general computer] architecture can be built in just a few hours of work, [...] at the same time, Hack is sufficiently general to illustrate the key operating principles and hardware elements underlying the design of any digital computer."_ [_Elements of Computing Systems_ (ECS)](https://www.nand2tetris.org/book). I recommend getting this book. But it can be helpful to hence also look into the related [NAND to Tetris course](https://www.nand2tetris.org/course). 
 
 ## Learn to Create the Architecture, Hardware, and Software
->[!Note]
 >As of now, this project is a work in progress and the two points listed below are incomplete. If you are just starting out, it might be very helpful to get you started though.
 
 + Learn and use **common tools in the industry** like [Verilog](https://en.wikipedia.org/wiki/Verilog) and [GtkWave](https://gtkwave.github.io/gtkwave/install/win.html) to create and test the Hack computer architecture.
@@ -18,13 +17,13 @@ _More is planned._
 
 ## Complete Workflow: Get Started!
 If you want to learn how to design a Hack computer and do all of the above, I documented every step of the process in the chapters below.
-1. [Introduction](www.quentinwach.com/Hack-Computer/1_Get_Started.html). Explains what we are going to do and guides you through the setup of all the tools. We'll end by writing a "Hello World!" of Verilog and simulating/testing it.
-2. [Boolean Arithmetic](www.quentinwach.com/Hack-Computer/2_Boolean_Arithmetic.html). Here, we'll create our first arithmetic modules, starting with a Half-Adder and ending with a complete, working Arithmetic Logic Unit (ALU).
-3. [Sequential Logic](www.quentinwach.com/Hack-Computer/3_Sequential_Logic.html). This chapter contains the code and notes for building registers for memory as well as a counter.
-4. [Machine Language](www.quentinwach.com/Hack-Computer/4_Machine_Language.html). This is where we'll write our first little program making use of the components we defined up to this point.
-5. [Computer Architecture](www.quentinwach.com/Hack-Computer/5_Computer_Architecture.html). We'll then finally put everything together, designing the whole hardware architecture of the computer containing, memory, instruction memory, and the CPU.
-6. [Assembler](www.quentinwach.com/Hack-Computer/6_Assembler.html). Finally, we'll write some Assembly for this computer concluding in an implementation of the game _Pong_.
-7. [Conclusion](www.quentinwach.com/Hack-Computer/7_Conclusion.html). Some concluding thoughts, ideas for the future, tips, and useful references.
+1. [Introduction](./1_Get_Started.html). Explains what we are going to do and guides you through the setup of all the tools. We'll end by writing a "Hello World!" of Verilog and simulating/testing it.
+2. [Boolean Arithmetic](./2_Boolean_Arithmetic.html). Here, we'll create our first arithmetic modules, starting with a Half-Adder and ending with a complete, working Arithmetic Logic Unit (ALU).
+3. [Sequential Logic](./3_Sequential_Logic.html). This chapter contains the code and notes for building registers for memory as well as a counter.
+4. [Machine Language](./4_Machine_Language.html). This is where we'll write our first little program making use of the components we defined up to this point.
+5. [Computer Architecture](./5_Computer_Architecture.html). We'll then finally put everything together, designing the whole hardware architecture of the computer containing, memory, instruction memory, and the CPU.
+6. [Assembler](./6_Assembler.html). Finally, we'll write some Assembly for this computer concluding in an implementation of the game _Pong_.
+7. [Conclusion](./7_Conclusion.html). Some concluding thoughts, ideas for the future, tips, and useful references.
 
 
 ## Tools
@@ -38,10 +37,10 @@ to program the designs,
 Optionally, [Logisim](http://www.cburch.com/logisim/) can be a nice playground to test circuit ideas fast.
 
 ## Installing Logisim
-Installing Logisim is as easy as downloading the `.exe` from http://www.cburch.com/logisim/ and following the install instructions. It is a compiled program with an intuitive GUI. You can then go ahead and immediately build your first digital circuits. In fact, Logisim is quite capable of simulating any computer you want to build. But while it is more intuitive and great for testing ideas, it is also quite time-consuming for larger projects to draw and connect every component yourself. That's just one of many reasons for why we have programmatic hardware description languages.
+Installing Logisim is as easy as downloading the `.exe` from [http://www.cburch.com/logisim/](http://www.cburch.com/logisim/) and following the install instructions. It is a compiled program with an intuitive GUI. You can then go ahead and immediately build your first digital circuits. In fact, Logisim is quite capable of simulating any computer you want to build. But while it is more intuitive and great for testing ideas, it is also quite time-consuming for larger projects to draw and connect every component yourself. That's just one of many reasons for why we have programmatic hardware description languages.
 
 ## Installing Icarus Verilog & GTK Wave
-[Download Icarus here](https://bleyer.org/icarus/). THis installation program will include gtkwave as well. Make sure to use the most recent version and during installation check the installation path box so that you can open Icarus and verilog simply by typing
+[Download Icarus here](https://bleyer.org/icarus/). This installation program will include gtkwave as well. Make sure to use the most recent version and during installation check the installation path box so that you can open Icarus and verilog simply by typing
 ```
 >gtkwave
 ```
