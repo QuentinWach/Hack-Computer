@@ -4,6 +4,7 @@ author = "Quentin Wach"
 description = "Verilog implementation and detailed explanation of the Hack computer architecture with the help of Logisim, Icarus Verilog, and GTKWave."
 
 [output.html]
-default-theme = "light"
-preferred-dark-theme = "navy"
+theme = "azaleabook-theme"
+default-theme = "azaleabook-light"
+preferred-dark-theme = "azaleabook-dark"
 mathjax-support = true
