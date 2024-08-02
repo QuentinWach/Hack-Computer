@@ -1,4 +1,5 @@
 ## Future Ideas
+<!--
 Since there are so many other people who have already done quite similar projects, I do not plan to continue much further here. Still, general topics for future work may include:
 ### Software
 + Virtual Machine
@@ -16,3 +17,4 @@ Since there are so many other people who have already done quite similar project
   + Flappy Bird!
   + Fluid Simulation?
 + Assemble the computer on breadboards or PCB (provide files). 
+-->
