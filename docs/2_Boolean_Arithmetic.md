@@ -158,3 +158,5 @@ module alu(
 
 endmodule
 ```
+
+Nice! With that we continue working on the sub-components we need to make sequential changes in our computer, like adding bits to memory and stepping forward in time using a clock.

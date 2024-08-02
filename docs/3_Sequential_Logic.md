@@ -6,7 +6,10 @@ The following building blocks, when combined with the ALU and other components, 
 + And the Counter is used as the program counter in the CPU, like a clock.
 
 ## DFF
-The DFF stores a single bit. On each positive edge of the clock signal, it updates its output q with the value of the input d.
+The DFF stores a single bit. On each positive edge of the clock signal, it updates its output q with the value of the input d. Here is a Logisim implementation showing how we can actually store information. From here on out, I will focus on just the Verilog though.
+
+![](3_Flip_Flop.jpg)
+
 ```Verilog
 module DFF(
     input clk,
@@ -20,8 +23,12 @@ end
 
 endmodule
 ```
+
 ## 1-Bit Register
 The 1-Bit Register is a controllable DFF. It stores a single bit and updates its value when the load signal is high. The current state is continuously output.
+
+![](3_1_Bit_Register.jpg)
+
 ```Verilog
 module Bit(
     input clk,
