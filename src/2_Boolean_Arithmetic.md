@@ -5,7 +5,9 @@ Open the `2_Boolean_Arithmetic.circ` Logisim file from the modules directory to 
 ## Half-Adder
 A half-adder is a digital circuit that adds two single binary digits and produces a sum and a carry. The sum is the XOR of the inputs, while the carry is the AND of the inputs.
 
-![](2_Half_Adder.jpg)
+|![](2_Half_Adder.jpg)|
+| :-: |
+|A half-adder design created in Logisim with two input bits, two output bits, one bitwise XOR and one bitwise AND logic gate.|
 
 ```Verilog
 module half_adder(
@@ -19,7 +21,9 @@ endmodule
 ## Full-Adder
 A full-adder adds three single binary digits (two inputs and one carry-in) and produces a sum and a carry-out. It's implemented using two half-adders and an OR gate.
 
-![](2_Full_Adder.jpg)
+|![](2_Full_Adder.jpg)|
+| :-: |
+|A full-adder design created in Logisim with two input signal bits, one control bit (cin), two output bits, one controt output bit (cout), and several XOR, AND and OR logic gates.|
 
 ```Verilog
 module full_adder(
@@ -38,7 +42,9 @@ endmodule
 ## Adder
 This is a 16-bit adder chaining 16 full-adders without carry-in or carry-out, as per HACK specifications. It's used in the ALU for addition operations. To illustrate the principle of how the half-adders are wired up, below is an image of a 3-bit adder I created in Logisim:
 
-![](2_3_Bit_Adder.jpg)
+|![](2_3_Bit_Adder.jpg)|
+| :-: |
+|A 3-bit adder design created in Logisim using full-adders.|
 
 ```Verilog
 module adder(
@@ -63,7 +69,10 @@ module adder(
 endmodule
 ```
 Oh, what the heck. You know what? Here is the 16-Bit adder in its full glory as well:
-![](2_16_Bit_Adder.jpg)
+
+|![](2_16_Bit_Adder.jpg)|
+| :-: |
+|A 16-bit adder design created in Logisim using full-adders.|
 
 ## Incrementer
 A simple 16-bit incrementer. Here, `out = in + 16'd1` assigns the result of `in + 16'd1` to the output out where...
@@ -83,7 +92,9 @@ This seems rather simple to implement in Logisim. For example, we may use a 16-B
 
 Instead, half-adders to the rescue!
 
-![](2_Incrementer.jpg)
+|![](2_Incrementer.jpg)|
+| :-: |
+|An incrementer design created in Logisim using half-adders.|
 
 Where before we still had to generate a loop to add together our two 16-Bit numbers together, Verilog simplifies the increment by 1 quite a bit even though we require so many half-adders in our Logisim layout. In Verilog, the high-level abstraction provided by the language allows you to describe the desired behavior of a circuit rather than its specific implementation details, such as using a specific set of half-adders. While structural modeling like I did here in Logisim is important for learning and specific low-level design tasks, behavioral modeling is the preferred approach in most professional design scenarios due to its efficiency and flexibility.
 
@@ -105,7 +116,9 @@ ng: Set to 1 if the output is negative (MSB is 1)
 ```
 The ALU performs operations in stages according to the control bits, allowing for a variety of computations using different combinations of these bits. Here is an implementation in Logisim similar to [jbchoinard's sixteen design (GitHub)](https://github.com/jbchouinard/sixteen). Instead of using the components we built though, I am using the internal ones in part since their UI is nicer. Sill, you could easily just use the adders we created before.
 
-![](2_ALU.jpg)
+|![](2_ALU.jpg)|
+| :-: |
+|A full Hack arithmetic logic unit design created in Logisim.|
 
 In Verilog this looks like the code below. I heavily commented this code to explain it:
 ```Verilog
