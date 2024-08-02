@@ -1,13 +1,19 @@
 ![](docs/header_design.png)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Read: Elements of Computing Systems](https://img.shields.io/badge/)](https://opensource.org/licenses/MIT)
 
 
-_"Hack is a general-purpose computer system, designed to strike a balance between simplicity and power. On the one hand, the Hack architecture can be built in just a few hours of work, [...] at the same time, Hack is sufficiently general to illustrate the key operating principles and hardware elements underlying the design of any digital computer."_ 
+_"Hack is a general-purpose computer system, designed to strike a balance between simplicity and power. On the one hand, the Hack architecture can be built in just a few hours of work, [...] at the same time, Hack is sufficiently general to illustrate the key operating principles and hardware elements underlying the design of any digital computer."_ [_Elements of Computing Systems_ (ECS)](https://www.nand2tetris.org/book). I recommend getting this book. But it can be helpful to hence also look into the related [NAND to Tetris course](https://www.nand2tetris.org/course). 
 
-This projects is based on the book [_Elements of Computing Systems_](https://www.nand2tetris.org/book). It can be helpful to hence also look into the related [NAND to Tetris course](https://www.nand2tetris.org/course). My twist on it is that I decided to **not use any of the the provided tools** but instead teach myself the more **common tools in the industry** like [Verilog]() and explain it with the help of [Logisim](). We end up building a little emulator for this 16-bit computer and write some Assembly to play a little game!
 
-## Overview
-If you want to learn how to build a computer, I documented every step of the design process in the chapters below.
++ **Not using any of the uncommon ECS-provided tools** but instead uses and explains **common tools in the industry** like [Verilog]() and [GtkWave](). 
++ Explains the circuits with the help of [Logisim](). 
++ Comes with an emulator written in [C]() or [Python]().
++ We'll write some [Assembly]() to play a little game!
++ Create an actual `.gds` mask with the [OpenLane PDK]().
+
+## Start Here & Design Your Own
+If you want to learn how to design a Hack computer and do all of the above, I documented every step of the process in the chapters below.
 1. [Introduction](docs/1_Get_Started.md). Explains what we are going to do and guides you through the setup of all the tools. We'll end by writing a "Hello World!" of Verilog and simulating/testing it.
 2. [Boolean Arithmetic](docs/2_Boolean_Arithmetic.md). Here, we'll create our first arithmetic modules, starting with a Half-Adder and ending with a complete, working Arithmetic Logic Unit (ALU).
 3. [Sequential Logic](docs/3_Sequential_Logic.md). This chapter contains the code and notes for building registers for memory as well as a counter.
