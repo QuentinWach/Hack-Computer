@@ -103,7 +103,11 @@ It also has two status outputs:
 zr: Set to 1 if the output is zero
 ng: Set to 1 if the output is negative (MSB is 1)
 ```
-The ALU performs operations in stages according to the control bits, allowing for a variety of computations using different combinations of these bits. I heavily commented this code to explain it:
+The ALU performs operations in stages according to the control bits, allowing for a variety of computations using different combinations of these bits. Here is an implementation in Logisim similar to [jbchoinard's sixteen design (GitHub)](https://github.com/jbchouinard/sixteen). Instead of using the components we built though, I am using the internal ones in part since their UI is nicer. Sill, you could easily just use the adders we created before.
+
+![](2_ALU.jpg)
+
+In Verilog this looks like the code below. I heavily commented this code to explain it:
 ```Verilog
 module alu(
     // This declares the ALU module with its inputs and outputs. The HACK ALU

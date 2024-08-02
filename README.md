@@ -3,13 +3,11 @@
 
 _"On the one hand, the Hack [general computer] architecture can be built in just a few hours of work, [...] at the same time, Hack is sufficiently general to illustrate the key operating principles and hardware elements underlying the design of any digital computer."_ [_Elements of Computing Systems_ (ECS)](https://www.nand2tetris.org/book). I recommend getting this book. But it can be helpful to hence also look into the related [NAND to Tetris course](https://www.nand2tetris.org/course). 
 
-### Architecture
+## Learn to Create the Architecture, Hardware, and write Software
 + Learn and use **common tools in the industry** like [Verilog]() and [GtkWave]() to create and test the Hack computer architecture.
 + Explains all the circuits of the architecture with the help of [Logisim]().
-### Software
 + Learn how to use the provided emulator written in [C]() or [Python]().
 + Learn to write some [Assembly]() to make and play a little game. An example game and code is provided.
-### Hardware
 + Create an actual `.gds` mask with the [OpenLane PDK](https://openlane2.readthedocs.io/en/latest/getting_started/newcomers/index.html) and see it in [KLayout](https://www.klayout.de/).
 + Visualize/render the 3D-chip using [IC3D](https://github.com/QuentinWach/IC3D).
 
