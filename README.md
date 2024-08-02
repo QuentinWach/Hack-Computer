@@ -3,14 +3,18 @@
 
 _"On the one hand, the Hack [general computer] architecture can be built in just a few hours of work, [...] at the same time, Hack is sufficiently general to illustrate the key operating principles and hardware elements underlying the design of any digital computer."_ [_Elements of Computing Systems_ (ECS)](https://www.nand2tetris.org/book). I recommend getting this book. But it can be helpful to hence also look into the related [NAND to Tetris course](https://www.nand2tetris.org/course). 
 
+### Architecture
++ Learn and use **common tools in the industry** like [Verilog]() and [GtkWave]() to create and test the Hack computer architecture.
++ Explains all the circuits of the architecture with the help of [Logisim]().
+### Software
++ Learn how to use the provided emulator written in [C]() or [Python]().
++ Learn to write some [Assembly]() to make and play a little game. An example game and code is provided.
+### Hardware
++ Create an actual `.gds` mask with the [OpenLane PDK](https://openlane2.readthedocs.io/en/latest/getting_started/newcomers/index.html) and see it in [KLayout](https://www.klayout.de/).
++ Visualize/render the 3D-chip using [IC3D](https://github.com/QuentinWach/IC3D).
 
-+ **Not using any of the uncommon ECS-provided tools** but instead uses and explains **common tools in the industry** like [Verilog]() and [GtkWave](). 
-+ Explains the circuits with the help of [Logisim](). 
-+ Comes with an emulator written in [C]() or [Python]().
-+ We'll write some [Assembly]() to play a little game!
-+ Create an actual `.gds` mask with the [OpenLane PDK]().
 
-## Start Here & Design Your Own
+## Complete Workflow: Get Started!
 If you want to learn how to design a Hack computer and do all of the above, I documented every step of the process in the chapters below.
 1. [Introduction](docs/1_Get_Started.md). Explains what we are going to do and guides you through the setup of all the tools. We'll end by writing a "Hello World!" of Verilog and simulating/testing it.
 2. [Boolean Arithmetic](docs/2_Boolean_Arithmetic.md). Here, we'll create our first arithmetic modules, starting with a Half-Adder and ending with a complete, working Arithmetic Logic Unit (ALU).

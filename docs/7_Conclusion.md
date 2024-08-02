@@ -15,3 +15,4 @@ Since there are so many other people who have already done quite similar project
 + High resolution graphics to emulate a really cool retro game
   + Flappy Bird!
   + Fluid Simulation?
++ Assemble the computer on breadboards or PCB (provide files). 
