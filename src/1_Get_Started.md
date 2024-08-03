@@ -17,7 +17,7 @@ _More is planned._
 
 ## Complete Workflow: Get Started!
 If you want to learn how to design a Hack computer and do all of the above, I documented every step of the process in the chapters below.
-1. [Introduction](./1_Get_Started.html). Explains what we are going to do and guides you through the setup of all the tools. We'll end by writing a "Hello World!" of Verilog and simulating/testing it.
+1. [Get Started](./1_Get_Started.html). Explains what we are going to do and guides you through the setup of all the tools. We'll end by writing a "Hello World!" of Verilog and simulating/testing it.
 2. [Boolean Arithmetic](./2_Boolean_Arithmetic.html). Here, we'll create our first arithmetic modules, starting with a Half-Adder and ending with a complete, working Arithmetic Logic Unit (ALU).
 3. [Sequential Logic](./3_Sequential_Logic.html). This chapter contains the code and notes for building registers for memory as well as a counter.
 4. [Machine Language](./4_Machine_Language.html). This is where we'll write our first little program making use of the components we defined up to this point.

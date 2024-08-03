@@ -9,7 +9,7 @@ A half-adder is a digital circuit that adds two single binary digits and produce
 | :-: |
 |A half-adder design created in Logisim with two input bits, two output bits, one bitwise XOR and one bitwise AND logic gate.|
 
-```Verilog
+```verilog
 module half_adder(
     input a, b,
     output sum, carry
@@ -25,7 +25,7 @@ A full-adder adds three single binary digits (two inputs and one carry-in) and p
 | :-: |
 |A full-adder design created in Logisim with two input signal bits, one control bit (cin), two output bits, one controt output bit (cout), and several XOR, AND and OR logic gates.|
 
-```Verilog
+```verilog
 module full_adder(
     input a, b, cin,
     output sum, cout
@@ -46,7 +46,7 @@ This is a 16-bit adder chaining 16 full-adders without carry-in or carry-out, as
 | :-: |
 |A 3-bit adder design created in Logisim using full-adders.|
 
-```Verilog
+```verilog
 module adder(
     input [15:0] a, b,
     output [15:0] out
@@ -80,7 +80,7 @@ A simple 16-bit incrementer. Here, `out = in + 16'd1` assigns the result of `in 
 + `16'd1`: A 16-bit representation of the decimal number 1. The d indicates that the value is in decimal. It is explicitly specified as 16-bit wide to match the width of the input and output vectors.
 + And hence `in + 16'd1` performs an addition of the input value with the constant value 1. 
 
-```Verilog
+```verilog
 module incrementer(
     input [15:0] in,
     output [15:0] out
@@ -121,7 +121,8 @@ The ALU performs operations in stages according to the control bits, allowing fo
 |A full Hack arithmetic logic unit design created in Logisim.|
 
 In Verilog this looks like the code below. I heavily commented this code to explain it:
-```Verilog
+
+```verilog
 module alu(
     // This declares the ALU module with its inputs and outputs. The HACK ALU
     // operates on 16-bit numbers (x and y) and has 6 control bits (zx, nx, zy,

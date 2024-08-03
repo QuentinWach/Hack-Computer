@@ -27,9 +27,14 @@ body {
     overflow-x: hidden;
 }
 
+img {
+    filter: grayscale(1);
+}
+
 code {
     font-family: "Source Code Pro", Consolas, "Ubuntu Mono", Menlo, "DejaVu Sans Mono", monospace, monospace !important;
     font-size: 0.875em; /* please adjust the ace font size accordingly in editor.js */
+    border-radius: 15px;
 }
 
 /* Don't change font size in headers. */

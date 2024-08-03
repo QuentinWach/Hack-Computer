@@ -12,7 +12,7 @@ The DFF stores a single bit. On each positive edge of the clock signal, it updat
 | :-: |
 |A flip-flop circuit storing a bit created in Logisim.|
 
-```Verilog
+```verilog
 module DFF(
     input clk,
     input d,
@@ -31,7 +31,7 @@ The 1-Bit Register is a controllable DFF. It stores a single bit and updates its
 
 ![](3_1_Bit_Register.jpg)
 
-```Verilog
+```verilog
 module Bit(
     input clk,
     input in,
@@ -52,7 +52,8 @@ endmodule
 ```
 ## 8-Register Memory (RAM8)
 The RAM8 module is a small memory unit with 8 16-bit registers. It can store a value to a specified address when load is high, and continuously outputs the value at the current address.
-```Verilog
+
+```verilog
 module RAM8(
     input clk,
     input [2:0] address,
@@ -74,7 +75,8 @@ endmodule
 ```
 ## n-Register Memory
 This is a parameterized RAM module that can be instantiated with different sizes. It functions similarly to RAM8 but with a configurable number of registers. The `$clog2(SIZE)` determines the width of the address input based on the RAM size.
-```Verilog
+
+```verilog
 module RAM(
     input clk,
     input [$clog2(SIZE)-1:0] address,
@@ -98,7 +100,8 @@ endmodule
 ```
 ## Counter
 The Counter is a 16-bit program counter for the Hack architecture. It can be reset to 0, loaded with a specific value, or incremented. This is typically used to keep track of the next instruction to be executed in the Hack computer.
-```Verilog
+
+```verilog
 module Counter(
     input clk,
     input reset,

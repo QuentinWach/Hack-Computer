@@ -24,7 +24,7 @@
 
 code {
     background-color: #666666;
-    border-radius: 5px;
+    border-radius: 15px;
 
     /* Force background to be printed in Chrome */
     -webkit-print-color-adjust: exact;
