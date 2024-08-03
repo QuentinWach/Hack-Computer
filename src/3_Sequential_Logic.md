@@ -1,3 +1,4 @@
+# Sequential Logic
 The following building blocks, when combined with the ALU and other components, form the complete Hack computer system.
 
 + The D Flip-Flop (DFF) forms the basis for all memory elements.

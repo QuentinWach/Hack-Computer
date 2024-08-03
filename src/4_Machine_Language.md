@@ -1,3 +1,4 @@
+# Machine Language
 Let's write some Hack assembly language, which is a low-level language designed for the Hack computer.
 
 ## Multiplication Program

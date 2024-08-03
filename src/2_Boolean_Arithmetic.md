@@ -1,3 +1,4 @@
+# Boolean Arithmetic
 Let's build up the individual modules which are typical for ALUs within CPUs, step-by-step. Note that the HACK architecture is extremely simplified. Compare the Verilog I show below to that of other designs and you'll quickly notice the simplicity.
 
 Open the `2_Boolean_Arithmetic.circ` Logisim file from the modules directory to try out and experiment with the circuits I present here.
