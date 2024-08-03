@@ -12,7 +12,7 @@
     --sidebar-width: 300px;
     --page-padding: 15px;
     --content-max-width: 750px;
-    --menu-bar-height: 50px;
+    --menu-bar-height: 25px;
     --font-size-sm: 1.4rem;
     --font-size-base: 1.6rem;
     --font-size-lg: 1.8rem;
@@ -53,9 +53,9 @@
     --quote-bg: hsl(197, 37%, 96%);
     --quote-border: hsl(197, 37%, 91%);
 
-    --table-border-color:#ccc;
-    --table-header-bg:#ddd;
-    --table-alternate-bg: #eee;
+    --table-border-color:#ffffff00;
+    --table-header-bg:#ffffff00;
+    --table-alternate-bg: #ffffff00;
 
     --searchbar-border-color: #aaa;
     --searchbar-bg: #fafafa;
