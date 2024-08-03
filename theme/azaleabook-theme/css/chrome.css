@@ -108,7 +108,7 @@ a > .hljs {
 .menu-title {
     display: inline-block;
     font-size: 2.4rem;
-    line-height: var(--menu-bar-height);
+    line-height: 25px;
     text-align: center;
     margin: 0;
     flex: 1;

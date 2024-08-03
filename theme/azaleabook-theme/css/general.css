@@ -99,9 +99,9 @@ h6:target::before {
     margin-right: auto;
     max-width: var(--content-max-width);
 }
-.content p { line-height: 1.6em; }
-.content ol { line-height: 1.6em; }
-.content ul { line-height: 1.6em; }
+.content p { line-height: 1.5em; }
+.content ol { line-height: 1.5em; }
+.content ul { line-height: 1.5em; }
 .content a { text-decoration: none; }
 .content a:hover { text-decoration: underline; }
 .content img, .content video { max-width: 100%; }

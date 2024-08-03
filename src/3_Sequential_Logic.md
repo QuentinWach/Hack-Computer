@@ -123,3 +123,5 @@ end
 
 endmodule
 ```
+
+Here is a little fun fact: If you have a 64 bit counter, and only ever increment it by 1, you may safely assume it will never overflow! Why? Well, if your 4GHz processor increments *every single clock cycle*, it will *still* take 146 years to overflow. So in practice: never. Assuming we use off-the-shelve ICs to build a bread board Hack computer. How about our 16 bit counter? When will it likely overflow?
