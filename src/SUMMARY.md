@@ -9,7 +9,6 @@
   - [Full-Adder](2_Boolean_Arithmetic.md/#full-adder)
   - [16-Bit Adder](2_Boolean_Arithmetic.md/#adder)
   - [Incrementer](2_Boolean_Arithmetic.md/#incrementer)
-  - [Arithmetic Logic Unit](2_Boolean_Arithmetic.md/#arithmetic-logic-unit-alu)
 - [Sequential Logic](3_Sequential_Logic.md)
 - [Machine Language](4_Machine_Language.md)
 - [Computer Architecture](5_Computer_Architecture.md)
