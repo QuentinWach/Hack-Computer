@@ -204,19 +204,14 @@
  
 
 
- img {
+/* Default style (assumed light mode) */
+img {
     transition: filter 0.3s ease, mix-blend-mode 0.3s ease;
     filter: none; /* Reset filter */
     mix-blend-mode: normal; /* Reset blend mode */
 }
 
-@media (prefers-color-scheme: light) {
-    img {
-        filter: grayscale(1) invert(0);
-        mix-blend-mode: normal; /* Explicitly set to normal */
-    }
-}
-
+/* Dark mode styles */
 @media (prefers-color-scheme: dark) {
     img {
         filter: grayscale(1) invert(1);

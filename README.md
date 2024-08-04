@@ -15,7 +15,7 @@ _"On the one hand, the Hack [general computer] architecture can be built in just
 + Visualize/render the 3D-chip using [IC3D](https://github.com/QuentinWach/IC3D).-->
 
 
-<a href="https://www.quentinwach.com/Hack-Computer" style="width: 250px; padding: 10px 20px; font-size: 18px; background-color: crimson; color: white; text-align: center; text-decoration: none; border-radius: 15px; box-shadow: 0px 0px 25px crimson; border: 0; margin: auto; display: block;">Get Started!</a>
+[![Glowing Button](src/start_reading.png)](https://www.quentinwach.com/Hack-Computer)
 
 
 ---
