@@ -205,6 +205,7 @@
 
  img {
     filter: grayscale(1);
+    mix-blend-mode: normal;
     transition: filter 0.3s ease, mix-blend-mode 0.3s ease;
 }
 
