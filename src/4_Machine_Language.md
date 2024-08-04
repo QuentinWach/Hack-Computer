@@ -1,10 +1,14 @@
 # Machine Language
 Let's write some Hack assembly language, which is a low-level language designed for the Hack computer.
 
+## Introduction to Hack Assembly
+
+>... TODO ...
+
 ## Multiplication Program
 This program multiplies the values in R0 and R1, storing the result in R2. It uses a simple repeated addition algorithm. The program loops R1 times, adding R0 to R2 each time, and then decrements R1. This continues until R1 reaches zero.
 
-```as
+```asm
 // Multiplies R0 and R1 and stores the result in R2.
 // (R0, R1, R2 refer to RAM[0], RAM[1], and RAM[2], respectively.)
 
@@ -44,7 +48,7 @@ If 'T' is pressed, it displays 'T' on the screen (at the memory address SCREEN).
 If 'q' is pressed, the program ends.
 For any other key, it continues listening.
 
-```as
+```asm
 // This program reads from the keyboard and displays on the screen.
 // It stops when the user presses 'q' (ASCII 113).
 

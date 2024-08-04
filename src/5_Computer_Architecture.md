@@ -51,6 +51,8 @@ Note, 0x means "this is a hexadecimal number" (base 16 instead of base 10). When
 
 This module also supports both read and write operations, controlled by the 'load' input.
 
+>... Testing with GTKWave ...
+
 ## CPU
 As for any von-Neumann architecture, the CPU module is the heart of the Hack computer. It processes instructions and manages the program flow. Here is the Verilog code:
 
@@ -130,7 +132,8 @@ It implements:
 
 The CPU operates in a fetch-decode-execute cycle, updating registers and memory based on the current instruction.
 
-What is a fetch-decode-execute cycle?
+>... Testing with GTKWave ...
+
 
 ## Instruction Memory
 The Instruction Memory module represents the ROM of the Hack computer. So it stores the program instructions and provides them to the CPU based on the address input. The `$readmemb` system task is used to initialize the ROM with a program file which we feed the `program.hack` file into:
@@ -156,6 +159,8 @@ module InstructionMemory(
 
 endmodule
 ```
+
+>... Testing with GTKWave ...
 
 ## Computer
 So finally, this is our complete computer architecture which ties all the previously designed components together:
@@ -199,6 +204,8 @@ module Computer(
 
 endmodule
 ``` 
+
+>... Testing with GTKWave ? ...
 
 As such, this module represents the complete Hack computer system. It operates by:
 

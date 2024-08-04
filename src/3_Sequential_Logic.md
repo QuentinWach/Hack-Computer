@@ -27,6 +27,8 @@ end
 endmodule
 ```
 
+>... Testing with GTKWave ...
+
 ## 1-Bit Register
 The 1-Bit Register is a controllable DFF. It stores a single bit and updates its value when the load signal is high. The current state is continuously output.
 
@@ -51,6 +53,9 @@ assign out = state;
 
 endmodule
 ```
+
+>... Testing with GTKWave ...
+
 ## 8-Register Memory (RAM8)
 The RAM8 module is a small memory unit with 8 16-bit registers. It can store a value to a specified address when load is high, and continuously outputs the value at the current address.
 
@@ -74,6 +79,9 @@ assign out = memory[address];
 
 endmodule
 ```
+
+>... Testing with GTKWave ...
+
 ## n-Register Memory
 This is a parameterized RAM module that can be instantiated with different sizes. It functions similarly to RAM8 but with a configurable number of registers. The `$clog2(SIZE)` determines the width of the address input based on the RAM size.
 
@@ -99,6 +107,9 @@ assign out = memory[address];
 
 endmodule
 ```
+
+>... Testing with GTKWave ...
+
 ## Counter
 The Counter is a 16-bit program counter for the Hack architecture. It can be reset to 0, loaded with a specific value, or incremented. This is typically used to keep track of the next instruction to be executed in the Hack computer.
 
@@ -123,5 +134,7 @@ end
 
 endmodule
 ```
+
+>... Testing with GTKWave ...
 
 Here is a little fun fact: If you have a 64 bit counter, and only ever increment it by 1, you may safely assume it will never overflow! Why? Well, if your 4GHz processor increments *every single clock cycle*, it will *still* take 146 years to overflow. So in practice: never. Assuming we use off-the-shelve ICs to build a bread board Hack computer. How about our 16 bit counter? When will it likely overflow? - Now, this is the _theory_ at least. In reality, this is based on several assumptions that do not apply to modern compute architectures. Having multiples cores, memory allocation optimization, multi-threading, ... I think all of these things break this calculus. That's why certain specialized applications require counters with even 128 bits.

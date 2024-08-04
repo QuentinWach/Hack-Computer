@@ -1,12 +1,6 @@
 # Overview
 - [Get Started](1_Get_Started.md)
-  - [Tools](https://quentinwach.com/Hack-Computer/1_Get_Started.html#tools)
-  - [Installing Logisim](https://quentinwach.com/Hack-Computer/1_Get_Started.html#installing-logisim)
-  - [Installing Icarus Verilog & GTK Wave](https://quentinwach.com/Hack-Computer/1_Get_Started.html#installing-icarus-verilog--gtk-wave)
-  - [The Basic Workflow](https://quentinwach.com/Hack-Computer/1_Get_Started.html#the-basic-workflow)
-  - [A Short Introduction to Verilog](https://quentinwach.com/Hack-Computer/1_Get_Started.html#a-short-introduction-to-verilog)
 - [Boolean Arithmetic](2_Boolean_Arithmetic.md)
-  - [Boolean Arithmetic](https://quentinwach.com/Hack-Computer/2_Boolean_Arithmetic.html#half-adder)
 - [Sequential Logic](3_Sequential_Logic.md)
 - [Machine Language](4_Machine_Language.md)
 - [Computer Architecture](5_Computer_Architecture.md)

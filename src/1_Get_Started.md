@@ -9,8 +9,8 @@ _"On the one hand, the Hack [general computer] architecture can be built in just
 
 + Learn and use **common tools in the industry** like [Verilog](https://en.wikipedia.org/wiki/Verilog) and [GtkWave](https://gtkwave.github.io/gtkwave/install/win.html) to create and test the Hack computer architecture.
 + Explains all the circuits of the architecture with the help of [Logisim](http://www.cburch.com/logisim/).
++ Learn to write some [Hack Assembly]() and convert it to binary code using [Python]() to make and play a little game.
 <!--+ Learn how to use the provided emulator written in [C]() or [Python]().
-+ Learn to write some [Assembly]() to make and play a little game. An example game and code is provided.
 + Create an actual `.gds` mask with the [OpenLane PDK](https://openlane2.readthesrc.io/en/latest/getting_started/newcomers/index.html) and see it in [KLayout](https://www.klayout.de/).
 + Visualize/render the 3D-chip using [IC3D](https://github.com/QuentinWach/IC3D).-->
 _More is planned._

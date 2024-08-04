@@ -19,6 +19,9 @@ module half_adder(
     assign carry = a & b;
 endmodule
 ```
+
+>... Testing with GTKWave ...
+
 ## Full-Adder
 A full-adder adds three single binary digits (two inputs and one carry-in) and produces a sum and a carry-out. It's implemented using two half-adders and an OR gate.
 
@@ -39,6 +42,8 @@ module full_adder(
     assign cout = carry1 | carry2;
 endmodule
 ```
+
+>... Testing with GTKWave ...
 
 ## Adder
 This is a 16-bit adder chaining 16 full-adders without carry-in or carry-out, as per HACK specifications. It's used in the ALU for addition operations. To illustrate the principle of how the half-adders are wired up, below is an image of a 3-bit adder I created in Logisim:
@@ -75,6 +80,8 @@ Oh, what the heck. You know what? Here is the 16-Bit adder in its full glory as 
 | :-: |
 |A 16-bit adder design created in Logisim using full-adders.|
 
+>... Testing with GTKWave ...
+
 ## Incrementer
 A simple 16-bit incrementer. Here, `out = in + 16'd1` assigns the result of `in + 16'd1` to the output out where...
 + `in`: The 16-bit input vector.
@@ -98,6 +105,8 @@ Instead, half-adders to the rescue!
 |An incrementer design created in Logisim using half-adders.|
 
 Where before we still had to generate a loop to add together our two 16-Bit numbers together, Verilog simplifies the increment by 1 quite a bit even though we require so many half-adders in our Logisim layout. In Verilog, the high-level abstraction provided by the language allows you to describe the desired behavior of a circuit rather than its specific implementation details, such as using a specific set of half-adders. While structural modeling like I did here in Logisim is important for learning and specific low-level design tasks, behavioral modeling is the preferred approach in most professional design scenarios due to its efficiency and flexibility.
+
+>... Testing with GTKWave ...
 
 ## Arithmetic Logic Unit (ALU)
 This ALU is specifically designed for the HACK computer and can perform 18 different operations based on the 6 1-bit control bits, which are encoded in the HACK machine language instructions:
@@ -173,5 +182,7 @@ module alu(
 
 endmodule
 ```
+
+>... Testing with GTKWave ...
 
 Nice! With that we continue working on the sub-components we need to make sequential changes in our computer, like adding bits to memory and stepping forward in time using a clock.

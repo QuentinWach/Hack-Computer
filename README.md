@@ -10,9 +10,9 @@ _"On the one hand, the Hack [general computer] architecture can be built in just
 
 + Learn and use **common tools in the industry** like [Verilog](https://en.wikipedia.org/wiki/Verilog) and [GtkWave](https://gtkwave.github.io/gtkwave/install/win.html) to create and test the Hack computer architecture.
 + Explains all the circuits of the architecture with the help of [Logisim](http://www.cburch.com/logisim/).
-<!--+ Learn how to use the provided emulator written in [C]() or [Python]().
-+ Learn to write some [Assembly]() to make and play a little game. An example game and code is provided.
-+ Create an actual `.gds` mask with the [OpenLane PDK](https://openlane2.readthesrc.io/en/latest/getting_started/newcomers/index.html) and see it in [KLayout](https://www.klayout.de/).
+<!--+ Learn how to use the provided emulator written in [C]() or [Python](). -->
++ Learn to write some [Hack Assembly]() and convert it to binary code using [Python]() to make and play a little game.
+<!-- + Create an actual `.gds` mask with the [OpenLane PDK](https://openlane2.readthesrc.io/en/latest/getting_started/newcomers/index.html) and see it in [KLayout](https://www.klayout.de/).
 + Visualize/render the 3D-chip using [IC3D](https://github.com/QuentinWach/IC3D).-->
 _More is planned._
 
@@ -23,7 +23,7 @@ If you want to learn how to design a Hack computer and do all of the above, I do
 3. [Sequential Logic](www.quentinwach.com/Hack-Computer/3_Sequential_Logic.html). This chapter contains the code and notes for building registers for memory as well as a counter.
 4. [Machine Language](www.quentinwach.com/Hack-Computer/4_Machine_Language.html). This is where we'll write our first little program making use of the components we defined up to this point.
 5. [Computer Architecture](www.quentinwach.com/Hack-Computer/5_Computer_Architecture.html). We'll then finally put everything together, designing the whole hardware architecture of the computer containing, memory, instruction memory, and the CPU.
-6. [Assembler](www.quentinwach.com/Hack-Computer/6_Assembler.html). Finally, we'll write some Assembly for this computer concluding in an implementation of the game _Pong_.
+6. [Assembler](www.quentinwach.com/Hack-Computer/6_Assembler.html). Finally, we'll create an Assembler and write some Assembly for this computer concluding in an implementation of the game _Pong_.
 7. [Conclusion](www.quentinwach.com/Hack-Computer/7_Conclusion.html). Some concluding thoughts, ideas for the future, tips, and useful references.
 
 
