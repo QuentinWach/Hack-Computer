@@ -11,7 +11,7 @@
 
  :root {
      /* Browser default font-size is 16px, this way 1 rem = 10px */
-     font-size: 62.5%;
+     font-size: 80%;
  }
  
  html {
@@ -95,9 +95,9 @@
      margin-right: auto;
      max-width: var(--content-max-width);
  }
- .content p { line-height: 1.5em; }
- .content ol { line-height: 1.5em; }
- .content ul { line-height: 1.5em; }
+ .content p { line-height: 1.3em; }
+ .content ol { line-height: 1.3em; }
+ .content ul { line-height: 1.3em; }
  .content a { text-decoration: none; }
  .content a:hover { text-decoration: underline; }
  .content img, .content video { max-width: 100%; }
@@ -179,7 +179,7 @@
  
  .chapter li.part-title {
      color: var(--sidebar-fg);
-     margin: 5px 0px;
+     margin: 25px 0px;
      font-weight: bold;
  }
  
