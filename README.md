@@ -10,7 +10,7 @@ _"On the one hand, the Hack [general computer] architecture can be built in just
 
 + Learn and use **common tools in the industry** like [Verilog](https://en.wikipedia.org/wiki/Verilog) and [GtkWave](https://gtkwave.github.io/gtkwave/install/win.html) to create and test the Hack computer architecture.
 + Explains all the circuits of the architecture with the help of [Logisim](http://www.cburch.com/logisim/).
-+ Learn to write some [Hack Assembly]() and convert it to binary code using [Python]() to make and play a little game.
++ Learn to write some [Assembly](https://en.wikipedia.org/wiki/Assembly_language) and convert it to binary code using [Python](https://www.python.org) to make and play a little game.
 
 _More is planned._
 
