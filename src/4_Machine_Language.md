@@ -40,6 +40,8 @@ This program multiplies the values in R0 and R1, storing the result in R2. It us
     0;JMP  // Infinite loop
 ```
 
+>... Testing ...
+
 ## I/O-Handling Program
 This program demonstrates basic I/O handling in the Hack computer:
 
@@ -85,3 +87,5 @@ There are very simple examples but these programs showcase key aspects of Hack a
 + Use of C-instructions for computation and jumps.
 + Labels for program flow control.
 + Interaction with memory-mapped I/O.
+
+>... Testing ...

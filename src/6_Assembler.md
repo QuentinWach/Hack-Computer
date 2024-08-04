@@ -110,6 +110,8 @@ In the Hack computer architecture, every line of generated binary code represent
 
 Note how the assembly code and the generate binary code thus have roughly the same number of lines.
 
+>... Testing ...
+
 ## Max
 Compared to the `add.asm` program, `max.asm` finding the maximum number of two numbers is a bit longer:
 
@@ -137,6 +139,9 @@ Compared to the `add.asm` program, `max.asm` finding the maximum number of two n
    @INFINITE_LOOP
    0;JMP            // infinite loop
 ```
+
+>... Testing ...
+
 ## Rect
 Now, the next big goal is to be able to play a game of Pong on our computer. For that, we need to draw images to the screen! The code below shows how to draw a simple rectangle.
 
@@ -173,5 +178,7 @@ Now, the next big goal is to be able to play a game of Pong on our computer. For
    @INFINITE_LOOP
    0;JMP
 ```
+
+>... Testing ...
 
 ## Pong

@@ -15,7 +15,7 @@
  }
  
  html {
-     font-family: "Open Sans", sans-serif;
+     font-family: "Gill Sans Nova", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
      color: var(--fg);
      background-color: var(--bg);
      text-size-adjust: none;
@@ -199,7 +199,7 @@
      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
  }
  .font-family-1{
-     font-family: Georgia, serif;
+     font-family: "Gill Sans Nova", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
  }
  
 

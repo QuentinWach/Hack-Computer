@@ -5,8 +5,9 @@
 _"On the one hand, the Hack [general computer] architecture can be built in just a few hours of work, [...] at the same time, Hack is sufficiently general to illustrate the key operating principles and hardware elements underlying the design of any digital computer."_ [_Elements of Computing Systems_ (ECS)](https://www.nand2tetris.org/book). I recommend getting this book or checking out the [NAND to Tetris course](https://www.nand2tetris.org/course). 
 
 + Learn and use **common tools in the industry** like [Verilog](https://en.wikipedia.org/wiki/Verilog) and [GtkWave](https://gtkwave.github.io/gtkwave/install/win.html) to create and test the Hack computer.
-+ Explains all the circuits of the architecture with the help of [Logisim](http://www.cburch.com/logisim/).
-+ Learn to write some [Assembly](https://en.wikipedia.org/wiki/Assembly_language) and convert it to binary code using [Python](https://www.python.org) to make and play a little game.
++ Explains important circuits of the architecture with the help of [Logisim](http://www.cburch.com/logisim/).
++ Learn to write some [Assembly](https://en.wikipedia.org/wiki/Assembly_language) and convert it to binary code using [Python](https://www.python.org).
++ Program the game of _Pong_ and emulate the computer to play it.
 
 
 
