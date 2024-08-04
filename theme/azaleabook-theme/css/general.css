@@ -207,14 +207,24 @@
 /* Default style (assumed light mode) */
 img {
     transition: filter 0.3s ease, mix-blend-mode 0.3s ease;
-    filter: none; /* Reset filter */
-    mix-blend-mode: normal; /* Reset blend mode */
+    filter: var(--img-filter); /* Reset filter */
+    mix-blend-mode: var(--img-blend); /* Reset blend mode */
 }
 
 /* Dark mode styles */
-@media (prefers-color-scheme: dark) {
+/*@media (prefers-color-scheme: dark) {
     img {
         filter: grayscale(1) invert(1);
         mix-blend-mode: screen;
     }
 }
+*/
+/* Dark mode styles */
+/*
+@media (prefers-color-scheme: dark) {
+    img {
+        filter: var(--img-filter); grayscale(1) invert(1);
+        mix-blend-mode: var(--img-blend); screen;
+    }
+}
+*/

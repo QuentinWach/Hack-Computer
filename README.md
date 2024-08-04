@@ -1,10 +1,10 @@
-![](src/header_design.png)
+[![](src/header_design.png)](https://www.quentinwach.com/Hack-Computer)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![GitHub latest commit](https://badgen.net/github/last-commit/QuentinWach/HACK-CPU)](https://GitHub.com/QuentinWach/HACK-CPU/commits/main)
 
-_"On the one hand, the Hack [general computer] architecture can be built in just a few hours of work, [...] at the same time, Hack is sufficiently general to illustrate the key operating principles and hardware elements underlying the design of any digital computer."_ [_Elements of Computing Systems_ (ECS)](https://www.nand2tetris.org/book). I recommend getting this book. But it can be helpful to hence also look into the related [NAND to Tetris course](https://www.nand2tetris.org/course). 
+_"On the one hand, the Hack [general computer] architecture can be built in just a few hours of work, [...] at the same time, Hack is sufficiently general to illustrate the key operating principles and hardware elements underlying the design of any digital computer."_ [_Elements of Computing Systems_ (ECS)](https://www.nand2tetris.org/book). I recommend getting this book or checking out the [NAND to Tetris course](https://www.nand2tetris.org/course). 
 
-+ Learn and use **common tools in the industry** like [Verilog](https://en.wikipedia.org/wiki/Verilog) and [GtkWave](https://gtkwave.github.io/gtkwave/install/win.html) to create and test the Hack computer architecture.
++ Learn and use **common tools in the industry** like [Verilog](https://en.wikipedia.org/wiki/Verilog) and [GtkWave](https://gtkwave.github.io/gtkwave/install/win.html) to create and test the Hack computer.
 + Explains all the circuits of the architecture with the help of [Logisim](http://www.cburch.com/logisim/).
 + Learn to write some [Assembly](https://en.wikipedia.org/wiki/Assembly_language) and convert it to binary code using [Python](https://www.python.org) to make and play a little game.
 
@@ -30,4 +30,6 @@ I documented every step of the process in the chapters below.
 7. [Assembler](https://www.quentinwach.com/Hack-Computer/6_Assembler.html). Finally, we'll create an Assembler and write some Assembly for this computer concluding in an implementation of the game _Pong_.
 8. [Conclusion](https://www.quentinwach.com/Hack-Computer/7_Conclusion.html). Some concluding thoughts, ideas for the future, tips, and useful references.
 
+---
+>Please **give this repo a ⭐** if you found it helpful. Thank you!
 

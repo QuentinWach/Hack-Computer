@@ -70,6 +70,9 @@
     --code-btn-bg: #fff;
     --code-btn-color: #111;
     --code-btn-color-hover: #000;
+
+    --img-filter: None;
+    --img-blend: normal;
 }
 
 .azaleabook-dark {
@@ -120,4 +123,8 @@
     --code-btn-bg: #333;
     --code-btn-color: #ddd;
     --code-btn-color-hover: #fff;
+
+    --img-filter: grayscale(1) invert(1);
+    --img-blend: screen;
+
 }
