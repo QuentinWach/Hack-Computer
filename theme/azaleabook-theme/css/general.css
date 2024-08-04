@@ -27,11 +27,6 @@
      overflow-x: hidden;
  }
  
- img {
-     filter: grayscale(1);
-     transition: filter 0.3s ease, mix-blend-mode 0.3s ease;
- }
- 
  code {
      font-family: "Source Code Pro", Consolas, "Ubuntu Mono", Menlo, "DejaVu Sans Mono", monospace, monospace !important;
      font-size: 0.875em; /* please adjust the ace font size accordingly in editor.js */
@@ -206,9 +201,18 @@
  .font-family-1{
      font-family: Georgia, serif;
  }
-  
- .dark-mode img {
-     filter: invert(1);
-     mix-blend-mode: multiply;
- }
  
+
+ img {
+    filter: grayscale(1);
+    transition: filter 0.3s ease, mix-blend-mode 0.3s ease;
+}
+
+/* Dark mode styles using media query */
+@media (prefers-color-scheme: dark) {
+    img {
+        filter: grayscale(1);
+        filter: invert(1);
+        mix-blend-mode: multiply;
+    }
+}
