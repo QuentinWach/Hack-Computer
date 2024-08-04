@@ -5,6 +5,6 @@ description = "Verilog implementation and detailed explanation of the Hack compu
 
 [output.html]
 theme = "theme/azaleabook-theme"
-default-theme = "azaleabook-light"
+default-theme = "azaleabook-darks"
 preferred-dark-theme = "azaleabook-dark"
 mathjax-support = true

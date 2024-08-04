@@ -138,6 +138,7 @@ Compared to the `add.asm` program, `max.asm` finding the maximum number of two n
    0;JMP            // infinite loop
 ```
 ## Rect
+Now, the next big goal is to be able to play a game of Pong on our computer. For that, we need to draw images to the screen! The code below shows how to draw a simple rectangle.
 
 ```asm
 // Rect.asm
