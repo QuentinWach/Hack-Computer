@@ -14,7 +14,9 @@ _"On the one hand, the Hack [general computer] architecture can be built in just
 <!-- + Create an actual `.gds` mask with the [OpenLane PDK](https://openlane2.readthesrc.io/en/latest/getting_started/newcomers/index.html) and see it in [KLayout](https://www.klayout.de/).
 + Visualize/render the 3D-chip using [IC3D](https://github.com/QuentinWach/IC3D).-->
 
-<button style="width:200px; height:50px; font-size: 18px; background-color: crimson; color: white; font-style: bold; border-radius: 15px; box-shadow: 0px 0px 25px crimson; border: 0px; margin-left: auto; margin-right: auto; display: block;" href="https://www.quentinwach.com/Hack-Computer"> Get Started!</button>
+
+<a href="https://www.quentinwach.com/Hack-Computer" style="width: 250px; padding: 10px 20px; font-size: 18px; background-color: crimson; color: white; text-align: center; text-decoration: none; border-radius: 15px; box-shadow: 0px 0px 25px crimson; border: 0; margin: auto; display: block;">Get Started!</a>
+
 
 ---
 I documented every step of the process in the chapters below.

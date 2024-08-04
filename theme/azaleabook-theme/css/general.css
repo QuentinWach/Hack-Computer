@@ -212,7 +212,7 @@
 
 @media (prefers-color-scheme: light) {
     img {
-        filter: grayscale(1);
+        filter: grayscale(1) invert(0);
         mix-blend-mode: normal; /* Explicitly set to normal */
     }
 }
