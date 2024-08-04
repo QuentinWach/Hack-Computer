@@ -54,7 +54,14 @@ This module also supports both read and write operations, controlled by the 'loa
 >... Testing with GTKWave ...
 
 ## CPU
-As for any von-Neumann architecture, the CPU module is the heart of the Hack computer. It processes instructions and manages the program flow. Here is the Verilog code:
+As for any von-Neumann architecture, the CPU module is the heart of the Hack computer. It processes instructions and manages the program flow. 
+
+|![](Hack_Computer_CPU_Block_Diagram.png)|
+| :-: |
+|Hack computer CPU block diagram created by [Rleininger, CC BY-SA 4.0](https://commons.wikimedia.org/w/index.php?curid=109499961).|
+
+
+Here is the Verilog code:
 
 ```verilog
 module CPU(
@@ -168,6 +175,11 @@ So finally, this is our complete computer architecture which ties all the previo
 + CPU: Executes instructions and manages program flow.
 + Instruction Memory: Provides instructions to the CPU.
 + Data Memory: Stores and retrieves data, including I/O operations.
+
+|![](Hack_Computer_Block_Diagram_2.png)|
+| :-: |
+|Hack computer block diagram created by [Rleininger, CC BY-SA 4.0](https://commons.wikimedia.org/w/index.php?curid=108495949).|
+
 
 ```verilog
 module Computer(

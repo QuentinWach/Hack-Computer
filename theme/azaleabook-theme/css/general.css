@@ -206,19 +206,20 @@
 
  img {
     transition: filter 0.3s ease, mix-blend-mode 0.3s ease;
+    filter: none; /* Reset filter */
+    mix-blend-mode: normal; /* Reset blend mode */
 }
 
 @media (prefers-color-scheme: light) {
     img {
-    filter: grayscale(1);
-    mix-blend-mode: normal;
+        filter: grayscale(1);
+        mix-blend-mode: normal; /* Explicitly set to normal */
     }
 }
 
-/* Dark mode styles using media query */
 @media (prefers-color-scheme: dark) {
     img {
-        filter: grayscale(1) invert(1); /* contrast(100) brightness(1.5); */
+        filter: grayscale(1) invert(1);
         mix-blend-mode: screen;
     }
 }
