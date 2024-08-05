@@ -20,7 +20,60 @@ module half_adder(
 endmodule
 ```
 
->... Testing with GTKWave ...
+Let's test this baby to see if it actually does what it is supposed to do. For that, we add a little testbench to our previous code like this 
+
+```verilog
+module half_adder(
+    input a, b,
+    output sum, carry
+);
+    assign sum = a ^ b;
+    assign carry = a & b;
+endmodule
+
+// Testbench
+module half_adder_tb;
+    // Declare signals
+    reg a, b;
+    wire sum, carry;
+
+    // Instantiate the half adder
+    half_adder ha1 (.a(a), .b(b), .sum(sum), .carry(carry));
+
+    // Generate VCD file
+    initial begin
+        $dumpfile("modules/half_adder.vcd");
+        $dumpvars(0, half_adder_tb);
+
+        // Test cases
+        a = 0; b = 0; #10;
+        a = 0; b = 1; #10;
+        a = 1; b = 0; #10;
+        a = 1; b = 1; #10;
+
+        $finish;
+    end
+
+    // Display results
+    initial begin
+        $monitor("Time=%0t a=%b b=%b sum=%b carry=%b", $time, a, b, sum, carry);
+    end
+endmodule
+``` 
+Follow the steps for using GTKWave of the previous chapter and you'll see a return in the terminal and a waveform like this:
+
+```
+VCD info: dumpfile half_adder.vcd opened for output.
+Time=0 a=0 b=0 sum=0 carry=0
+Time=10 a=0 b=1 sum=1 carry=0
+Time=20 a=1 b=0 sum=1 carry=0
+Time=30 a=1 b=1 sum=0 carry=1
+```
+|![](half_adder_signal.png)|
+| :--: |
+| GTKWave snapshot of the signals returned from the `half_adder.v` testbench. |
+
+Does that make sense? Yes! Great. Let's move on to the next module.
 
 ## Full-Adder
 A full-adder adds three single binary digits (two inputs and one carry-in) and produces a sum and a carry-out. It's implemented using two half-adders and an OR gate.
