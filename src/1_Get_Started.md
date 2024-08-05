@@ -62,10 +62,48 @@ Hello World!
 Now, inside Visual Studio Code you can install the _Verilog HDL_ extension which adds a little green button at the top of the window which helps you compile your verilog code instead of you having to type the command out in the terminal every time.
 
 **Step 4**. Visualize the waveforms/signals in gtkwave to check if our module functions as desired.
+To create and visualize waveforms, modify your Verilog code to include signal declarations and generate a VCD (Value Change Dump) file.
+Let's take for example the following Verilog:
 
->...
->TODO
->...
+```verilog
+module myModule();
+  reg clk;  // Declare a clock signal
+  reg [3:0] counter;  // Declare a 4-bit counter
+
+  initial begin
+    $dumpfile("test.vcd");  // Create a VCD file named test.vcd
+    $dumpvars(0, myModule);  // Dump all variables in the module
+
+    clk = 0;
+    counter = 0;
+    
+    repeat(16) begin
+      #5 clk = ~clk;  // Toggle clock every 5 time units
+      if (clk) counter = counter + 1;  // Increment counter on rising edge
+    end
+
+    $display("Simulation complete");
+    $finish;
+  end
+endmodule
+```
+
+Compile and run the simulation as before:
+```bash
+>iverilog -o test.vvp test.v
+>vvp test.vvp
+```
+which now also creates the `test.vcd` file. Which we can then view with
+
+```bash
+>gtkwave test.vcd
+```
+
+opening the GTKView software. Select the waveform in the UI and you'll see something like this:
+
+|![](gtkwave_test.png)|
+| :--: |
+| GTKWave program showing the `test.vcd` waveform. |
 
 ## A Short Introduction to Verilog
 Verilog is a hardware description language (HDL) used to model digital electronic systems. It can be used to describe hardware at various levels of abstraction, from high-level behavioral descriptions to low-level gate-level implementations allowing designers to simulate and synthesize digital circuits as hinted at before.

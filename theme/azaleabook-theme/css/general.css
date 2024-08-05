@@ -11,7 +11,7 @@
 
  :root {
      /* Browser default font-size is 16px, this way 1 rem = 10px */
-     font-size: 80%;
+     font-size: 70%;
  }
  
  html {
@@ -196,35 +196,16 @@
  
  /* Font family */
  .font-family-0{
-     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+     font-family: "Gill Sans Nova", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
  }
  .font-family-1{
-     font-family: "Gill Sans Nova", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-family: "Times New Roman", Times, serif;
  }
  
 
-
 /* Default style (assumed light mode) */
 img {
-    transition: filter 0.3s ease, mix-blend-mode 0.3s ease;
+    transition: filter 0.1s ease, mix-blend-mode 0.1s ease;
     filter: var(--img-filter); /* Reset filter */
     mix-blend-mode: var(--img-blend); /* Reset blend mode */
 }
-
-/* Dark mode styles */
-/*@media (prefers-color-scheme: dark) {
-    img {
-        filter: grayscale(1) invert(1);
-        mix-blend-mode: screen;
-    }
-}
-*/
-/* Dark mode styles */
-/*
-@media (prefers-color-scheme: dark) {
-    img {
-        filter: var(--img-filter); grayscale(1) invert(1);
-        mix-blend-mode: var(--img-blend); screen;
-    }
-}
-*/

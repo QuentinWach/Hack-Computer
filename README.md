@@ -1,15 +1,11 @@
-[![](src/header_design.png)](https://www.quentinwach.com/Hack-Computer)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![GitHub latest commit](https://badgen.net/github/last-commit/QuentinWach/HACK-CPU)](https://GitHub.com/QuentinWach/HACK-CPU/commits/main)
-
-_"On the one hand, the Hack [general computer] architecture can be built in just a few hours of work, [...] at the same time, Hack is sufficiently general to illustrate the key operating principles and hardware elements underlying the design of any digital computer."_ [_Elements of Computing Systems_ (ECS)](https://www.nand2tetris.org/book). I recommend getting this book or checking out the [NAND to Tetris course](https://www.nand2tetris.org/course). 
+|[![](src/header_design.png)](https://www.quentinwach.com/Hack-Computer)|
+| :--: |
+|[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![GitHub latest commit](https://badgen.net/github/last-commit/QuentinWach/HACK-CPU)](https://GitHub.com/QuentinWach/HACK-CPU/commits/main)|
 
 + Learn and use **common tools in the industry** like [Verilog](https://en.wikipedia.org/wiki/Verilog) and [GtkWave](https://gtkwave.github.io/gtkwave/install/win.html) to create and test the Hack computer.
 + Explains important circuits of the architecture with the help of [Logisim](http://www.cburch.com/logisim/).
 + Learn to write some [Assembly](https://en.wikipedia.org/wiki/Assembly_language) and convert it to binary code using [Python](https://www.python.org).
 + Program the game of _Pong_ and emulate the computer to play it.
-
-
 
 <!--+ Learn how to use the provided emulator written in [C]() or [Python](). -->
 <!-- + Create an actual `.gds` mask with the [OpenLane PDK](https://openlane2.readthesrc.io/en/latest/getting_started/newcomers/index.html) and see it in [KLayout](https://www.klayout.de/).
