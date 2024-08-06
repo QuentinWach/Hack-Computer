@@ -249,7 +249,22 @@ module alu(
 endmodule
 ```
 
-Look at the testbench I wrote in `alu.v`. It returns:
+Look at the testbench I wrote in `alu.v`. Here's what we expect for each case:
+
+```
+x + y: 10 + 5 = 15
+x - y: 10 - 5 = 5
+y - x: 10 - 5 = 5
+x & y: 0b1010101010101010 & 0b1100110011001100 = 0b1000100010001000 (34952)
+x | y: 0b1010101010101010 | 0b1100110011001100 = 0b1110111011101110 (61166)
+!x: ~0b1010101010101010 = 0b0101010101010101 (21845)
+!y: ~0b1010101010101010 = 0b0101010101010101 (21845)
+-x: -42 = 65494 (in 16-bit two's complement)
+-y: -42 = 65494 (in 16-bit two's complement)
+x + 1: 42 + 1 = 43
+```
+
+It returns:
 
 ```
 Time=0 x=   10 y=    5 zx=0 nx=0 zy=0 ny=0 f=1 no=0 out=   15 zr=0 ng=0
@@ -269,6 +284,5 @@ and
 |![](alu_signal.png)|
 | :--: |
 | GTKWave snapshot of the signals in signed decimals returned from the `alu.v` testbench. |
-
 
 Nice! With that we continue working on the sub-components we need to make sequential changes in our computer, like adding bits to memory and stepping forward in time using a clock.

@@ -15,12 +15,12 @@ _"On the one hand, the Hack [general computer] architecture can be built in just
 + Visualize/render the 3D-chip using [IC3D](https://github.com/QuentinWach/IC3D).-->
 _More is planned._
 
-+ USe cocotb for testing! Like in [this repo](https://github.com/eevaain/tiny-tpu/blob/main/test/test_is.py).
+<!--+ USe cocotb for testing! Like in [this repo](https://github.com/eevaain/tiny-tpu/blob/main/test/test_is.py). -->
 
 ## Complete Workflow: Get Started!
 If you want to learn how to design a Hack computer and do all of the above, I documented every step of the process in the chapters below. This is not a guide to solve the famous [NAND-to-Tetris course](https://www.nand2tetris.org/book) challenges. I barely skimmed the book and didn't look at the course much.
 
-0. [Overview](./0_Overview.html).
+0. [Overview](./0_Overview.html). This is where you are right now.
 1. [Get Started](./1_Get_Started.html). Explains what we are going to do and guides you through the setup of all the tools. We'll end by writing a "Hello World!" of Verilog and simulating/testing it.
 2. [Boolean Arithmetic](./2_Boolean_Arithmetic.html). Here, we'll create our first arithmetic modules, starting with a Half-Adder and ending with a complete, working Arithmetic Logic Unit (ALU).
 3. [Sequential Logic](./3_Sequential_Logic.html). This chapter contains the code and notes for building registers for memory as well as a counter.
