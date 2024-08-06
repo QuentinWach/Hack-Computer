@@ -1,7 +1,7 @@
 # Boolean Arithmetic
 Let's build up the individual modules which are typical for ALUs within CPUs, step-by-step. Note that the HACK architecture is extremely simplified. Compare the Verilog I show below to that of other designs and you'll quickly notice the simplicity.
 
-Open the `2_Boolean_Arithmetic.circ` Logisim file from the modules directory to try out and experiment with the circuits I present here.
+Open the `logic.circ` Logisim file from the root directory to try out and experiment with the circuits I present here.
 
 ## Half-Adder
 A half-adder is a digital circuit that adds two single binary digits and produces a sum and a carry. The sum is the XOR of the inputs, while the carry is the AND of the inputs.
@@ -96,7 +96,24 @@ module full_adder(
 endmodule
 ```
 
->... Testing with GTKWave ...
+I won't show you the test bench here but you can see it in the modules directory on Github. The results are as expected:
+
+```
+VCD info: dumpfile modules/full_adder.vcd opened for output.
+Time=0 a=0 b=0 cin=0 sum=0 cout=0
+Time=10 a=0 b=0 cin=1 sum=1 cout=0
+Time=20 a=0 b=1 cin=0 sum=1 cout=0
+Time=30 a=0 b=1 cin=1 sum=0 cout=1
+Time=40 a=1 b=0 cin=0 sum=1 cout=0
+Time=50 a=1 b=0 cin=1 sum=0 cout=1
+Time=60 a=1 b=1 cin=0 sum=0 cout=1
+Time=70 a=1 b=1 cin=1 sum=1 cout=1
+```
+|![](full_adder_signal.png)|
+| :--: |
+| GTKWave snapshot of the signals returned from the `full_adder.v` testbench. |
+
+Now let's continue with some of the other crucial modules and then we'll create our ALU and test it as well.
 
 ## Adder
 This is a 16-bit adder chaining 16 full-adders without carry-in or carry-out, as per HACK specifications. It's used in the ALU for addition operations. To illustrate the principle of how the half-adders are wired up, below is an image of a 3-bit adder I created in Logisim:
@@ -133,8 +150,6 @@ Oh, what the heck. You know what? Here is the 16-Bit adder in its full glory as 
 | :-: |
 |A 16-bit adder design created in Logisim using full-adders.|
 
->... Testing with GTKWave ...
-
 ## Incrementer
 A simple 16-bit incrementer. Here, `out = in + 16'd1` assigns the result of `in + 16'd1` to the output out where...
 + `in`: The 16-bit input vector.
@@ -158,8 +173,6 @@ Instead, half-adders to the rescue!
 |An incrementer design created in Logisim using half-adders.|
 
 Where before we still had to generate a loop to add together our two 16-Bit numbers together, Verilog simplifies the increment by 1 quite a bit even though we require so many half-adders in our Logisim layout. In Verilog, the high-level abstraction provided by the language allows you to describe the desired behavior of a circuit rather than its specific implementation details, such as using a specific set of half-adders. While structural modeling like I did here in Logisim is important for learning and specific low-level design tasks, behavioral modeling is the preferred approach in most professional design scenarios due to its efficiency and flexibility.
-
->... Testing with GTKWave ...
 
 ## Arithmetic Logic Unit (ALU)
 This ALU is specifically designed for the HACK computer and can perform 18 different operations based on the 6 1-bit control bits, which are encoded in the HACK machine language instructions:
@@ -236,6 +249,26 @@ module alu(
 endmodule
 ```
 
->... Testing with GTKWave ...
+Look at the testbench I wrote in `alu.v`. It returns:
+
+```
+Time=0 x=   10 y=    5 zx=0 nx=0 zy=0 ny=0 f=1 no=0 out=   15 zr=0 ng=0
+Time=10 x=   10 y=    5 zx=0 nx=1 zy=0 ny=0 f=1 no=1 out=    5 zr=0 ng=0
+Time=20 x=    5 y=   10 zx=0 nx=0 zy=0 ny=1 f=1 no=1 out=    5 zr=0 ng=0
+Time=30 x=43690 y=52428 zx=0 nx=0 zy=0 ny=0 f=0 no=0 out=34952 zr=0 ng=1
+Time=40 x=43690 y=52428 zx=0 nx=1 zy=0 ny=1 f=0 no=1 out=61166 zr=0 ng=1
+Time=50 x=43690 y=    0 zx=0 nx=1 zy=1 ny=0 f=0 no=0 out=    0 zr=1 ng=0
+Time=60 x=    0 y=43690 zx=1 nx=0 zy=0 ny=1 f=0 no=0 out=    0 zr=1 ng=0
+Time=70 x=   42 y=    0 zx=0 nx=1 zy=1 ny=0 f=1 no=1 out=   42 zr=0 ng=0
+Time=80 x=    0 y=   42 zx=1 nx=0 zy=0 ny=1 f=1 no=1 out=   42 zr=0 ng=0
+Time=90 x=   42 y=    0 zx=0 nx=1 zy=1 ny=1 f=1 no=1 out=   43 zr=0 ng=0
+```
+
+and
+
+|![](alu_signal.png)|
+| :--: |
+| GTKWave snapshot of the signals in signed decimals returned from the `alu.v` testbench. |
+
 
 Nice! With that we continue working on the sub-components we need to make sequential changes in our computer, like adding bits to memory and stepping forward in time using a clock.
