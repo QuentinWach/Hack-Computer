@@ -182,3 +182,6 @@ Now, the next big goal is to be able to play a game of Pong on our computer. For
 >... Testing ...
 
 ## Pong
+<!--
+Write a Verilog emulator in Python that takes in Verilog code and .hack binaries to run programs. Show a GUI of the screen, take in the keyboard presses, and show live stats of the CPU and memory etc.
+-->
