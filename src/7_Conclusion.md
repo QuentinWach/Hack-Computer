@@ -1,13 +1,25 @@
 # Notes & Conclusion
 
 **The ideal computer can handle diverse and complicated tasks in parallel.**
-In reality though there are always trade-offs to be made which leads to why we develop different architectures.
+In reality though there are always trade-offs to be made which leads to why we develop different architectures most commonly the CPU and the Graphics Processing Unit (GPU).
 
-CPUs are great at handling various diverse complicated tasks one by one.
+**CPU**s are great at handling various diverse complicated tasks one by one.
 
-GPUs are great at handling the many of the same simple tasks in parallel.
+**GPU**s are great at handling the many of the same simple tasks in parallel.
 
-Even this is an over-simplification though. GPUs are quite general these days but they are still primarily optimized to handle graphics. So while they can also run parallel physics or neural networks, a dedicated physics processing unit or dedicated AI accelerators are still outperforming GPUs by a lot. The reason we do not see much of this yet is the ecosystem NVIDIA has built around their graphics cards and monopolizes. It will take time to build the software, workflows, hardware, and various integrations etc. for AI accelerators to take over. It will take even longer for this to happen for physics processors given that there is no clearly communicated demand for it on the market right now.
+But there is much more to modern designs than I have talked about before.
+
+### Modern CPUs
+To summarize [this video](https://www.youtube.com/watch?v=_I8CLQazom0&list=PLTd6ceoshprfg23JMtwGysCm4tlc0I1ou), below, you can see a schematic overview of a typical CPU with multiple processing cores consisting of a control unit, ALU, and register coupled to various levels of cache memory (SRAM), and including a graphics controller which is typically connected to a GPU and a memory controller which in turn is connected to DRAM memory via a memory bus.
+
+|![](typical_CPU_layout.jpg)|
+| :-: |
+|Schematic overview of a typical modern CPU.|
+
+The different caches operate at varying speeds to distribute data among the cores efficiently. To further optimize the data exchange between the cores and the memory, the L1 cache is plit into an instruction cache (ICache) and data cache (DCache). The ICache only writes and hence tells the core which operations to execute while the DCache only writes and reads data to and from the core.
+
+### Modern GPUs
+ GPUs are quite general these days but they are still primarily optimized to handle graphics. So while they can also run parallel physics or neural networks, a dedicated physics processing unit or dedicated AI accelerators are still outperforming GPUs by a lot. The reason we do not see much of this yet is the ecosystem NVIDIA has built around their graphics cards and monopolizes. It will take time to build the software, workflows, hardware, and various integrations etc. for AI accelerators to take over. It will take even longer for this to happen for physics processors given that there is no clearly communicated demand for it on the market right now.
 
 <!--
 ## Graphics Acceleration

@@ -22,5 +22,4 @@
 
 <!--
     - [Bonus: FPGA Implementation](6_3_FPGA.md)
-
 >
