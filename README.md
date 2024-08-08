@@ -1,16 +1,18 @@
 <div align="center">
-<a href=https://quentinwach.com/computer-engineering>
 <h3> 📝 Personal Notes</h3>
 <h1> Computer Engineering</h1>
-</a>
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![GitHub latest commit](https://badgen.net/github/last-commit/QuentinWach/HACK-CPU)](https://GitHub.com/QuentinWach/HACK-CPU/commits/main)
+
+<a href=https://quentinwach.com/computer-engineering><b>www.quentinwach.com/computer-engineering</b></a>
 </div>
 
 >[!Note]
->I am currently restructuring the entire project to be more of an open notebook and to not just be about the Hack computer but a collection of notes about computer engineering, organization, and architecture with enough depth to take any application and design a dedicated computer just for it.
+>_I am currently restructuring the entire project to be more of an open notebook and to not just be about the Hack computer but a collection of notes about computer engineering, organization, and architecture with enough depth to take any application and design a dedicated computer just for it._
 
 
+
+<!--
 + Introduces **common tools in the industry** like [Verilog](https://en.wikipedia.org/wiki/Verilog) and [GtkWave](https://gtkwave.github.io/gtkwave/install/win.html)
 + Creating and testing the [Hack computer]().
 + Explains important circuits of the architecture with the help of [Logisim](http://www.cburch.com/logisim/).
@@ -19,7 +21,7 @@
 + [ ] Create an actual `.gds` mask with the [OpenLane PDK](https://openlane2.readthesrc.io/en/latest/getting_started/newcomers/index.html) and see it in [KLayout](https://www.klayout.de/).
 + [ ] Visualize/render the 3D-chip using [IC3D](https://github.com/QuentinWach/IC3D).
 + [ ] Compile the netlist and render the circuits.
-
+-->
 
 
 
