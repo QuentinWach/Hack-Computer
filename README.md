@@ -1,18 +1,29 @@
-|[![](src/header_design.png)](https://www.quentinwach.com/Hack-Computer)|
-| :--: |
-|[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![GitHub latest commit](https://badgen.net/github/last-commit/QuentinWach/HACK-CPU)](https://GitHub.com/QuentinWach/HACK-CPU/commits/main)|
+<div align="center">
 
-+ Learn and use **common tools in the industry** like [Verilog](https://en.wikipedia.org/wiki/Verilog) and [GtkWave](https://gtkwave.github.io/gtkwave/install/win.html) to create and test the Hack computer.
+<h3> 📝 Personal Notes</h3>
+<h1> Computer Engineering</h1>
+
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![GitHub latest commit](https://badgen.net/github/last-commit/QuentinWach/HACK-CPU)](https://GitHub.com/QuentinWach/HACK-CPU/commits/main)
+</div>
+
+>[!Attention]
+>I am currently restructuring the entire project to be more of an open notebook and to not just be about the Hack computer but a collection of notes about computer engineering, organization, and architecture with enough depth to take any application and design a dedicated computer just for it.
+
+
++ Introduces **common tools in the industry** like [Verilog](https://en.wikipedia.org/wiki/Verilog) and [GtkWave](https://gtkwave.github.io/gtkwave/install/win.html)
++ Creating and testing the [Hack computer]().
 + Explains important circuits of the architecture with the help of [Logisim](http://www.cburch.com/logisim/).
-+ Learn to write some [Assembly](https://en.wikipedia.org/wiki/Assembly_language) and convert it to binary code using [Python](https://www.python.org).
-+ Program the game of _Pong_ and emulate the computer to play it.
++ Discusses [Hack assembly](https://en.wikipedia.org/wiki/Assembly_language) and how to convert it to binary code using [Python](https://www.python.org).
++ [ ] Program the game of _Pong_ and emulate the computer to play it.
++ [ ] Create an actual `.gds` mask with the [OpenLane PDK](https://openlane2.readthesrc.io/en/latest/getting_started/newcomers/index.html) and see it in [KLayout](https://www.klayout.de/).
++ [ ] Visualize/render the 3D-chip using [IC3D](https://github.com/QuentinWach/IC3D).
++ [ ] Compile the netlist and render the circuits
 
-<!--+ Learn how to use the provided emulator written in [C]() or [Python](). -->
-<!-- + Create an actual `.gds` mask with the [OpenLane PDK](https://openlane2.readthesrc.io/en/latest/getting_started/newcomers/index.html) and see it in [KLayout](https://www.klayout.de/).
-+ Visualize/render the 3D-chip using [IC3D](https://github.com/QuentinWach/IC3D).-->
 
 
-[![Glowing Button](src/start_reading.png)](https://www.quentinwach.com/Hack-Computer)
+
+<!--[![Glowing Button](src/start_reading.png)](https://www.quentinwach.com/Hack-Computer)
 
 
 ---
@@ -30,3 +41,4 @@ I documented every step of the process in the chapters below.
 ---
 >Please **give this repo a ⭐** if you found it helpful. Thank you!
 
+-->

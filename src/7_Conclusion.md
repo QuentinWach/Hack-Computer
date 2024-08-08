@@ -1,13 +1,7 @@
 # Notes & Conclusion
 
-**The ideal computer can handle diverse and complicated tasks in parallel.**
-In reality though there are always trade-offs to be made which leads to why we develop different architectures most commonly the CPU and the Graphics Processing Unit (GPU).
-
-**CPU**s are great at handling various diverse complicated tasks one by one.
-
-**GPU**s are great at handling the many of the same simple tasks in parallel.
-
-But there is much more to modern designs than I have talked about before.
+**The ideal computer can handle arbitrarily diverse and complicated tasks in parallel.**
+In reality though, there are always trade-offs to be made which is why we develop different architectures most commonly the CPU and the Graphics Processing Unit (GPU). **CPU**s are great at handling various diverse complicated tasks one by one. **GPU**s are great at handling the many of the same simple tasks in parallel. But there is much more to modern designs than what I have talked about up until and I want to create a little overview.
 
 ### Modern CPUs
 To summarize [this video](https://www.youtube.com/watch?v=_I8CLQazom0&list=PLTd6ceoshprfg23JMtwGysCm4tlc0I1ou), below, you can see a schematic overview of a typical CPU with multiple processing cores consisting of a control unit, ALU, and register coupled to various levels of cache memory (SRAM), and including a graphics controller which is typically connected to a GPU and a memory controller which in turn is connected to DRAM memory via a memory bus.
@@ -18,6 +12,14 @@ To summarize [this video](https://www.youtube.com/watch?v=_I8CLQazom0&list=PLTd6
 
 The different caches operate at varying speeds to distribute data among the cores efficiently. To further optimize the data exchange between the cores and the memory, the L1 cache is split into an instruction cache (ICache) and data cache (DCache). The ICache only writes and hence tells the core which operations to execute while the DCache only writes and reads data to and from the core.
 
+If we compare this with the Hack computer architecture, its minimalism becomes clear. Modern CPUs have much more advanced capabilities. To summarize:
+
++ **Branching**: Modern CPUs have advanced branching capabilities, which allow them to make decisions and execute different code paths based on various conditions. This is a crucial feature that allows CPUs to handle complex, diverse tasks.
++ **Multiple Cores**: Modern CPUs typically have multiple processing cores, allowing them to execute multiple tasks or threads concurrently, improving overall performance. This became crucial in recent decades as Moore's Law started failing. And it goes much further than the original von-Neumann architecture.
++ **Hierarchical and More Optimized Cache**: As mentioned, modern CPUs have a hierarchical cache system (L1, L2, L3) with _specialized instruction and data caches_ (the so-called **Harvard architecture**, again, different from the von-Neumann architecture), which helps to efficiently manage and distribute data between the cores and main memory.
++ **Graphics Controller**: Many modern CPUs integrate a graphics controller, which offloads some graphics processing tasks from the main CPU cores, improving overall system performance.
++ **Larger Instruction Set and More Complex ALU/Control Unit**: Modern CPUs have a much larger and more complex instruction set, as well as more advanced Arithmetic Logic Units (ALUs) and Control Units, allowing them to handle a wider range of operations and tasks.
+
 ### Modern GPUs
 Modern graphics are extremely data intensive (hence the PCI Express for greater bandwidth) and demand for parallel compute (hence vast amounts of cores a.k.a. "shader cores"). While there are many cores they all have comparatively simple instructions though. It follows the "Single Instruction, Multiple Data" (SIMD) paradigm. This is possible because there is a much more clear and repetitive pipeline for GPUs. After all, they were originally and are still primarily meant for graphics acceleration. Below, you can see an illustration of the graphics rendering pipeline (as summarized by [this video](https://www.youtube.com/watch?v=bZdxcHEM-uc)).
 
@@ -25,8 +27,51 @@ Modern graphics are extremely data intensive (hence the PCI Express for greater 
 | :-: |
 |Schematic overview of a typical GPU's graphics rendering pipeline.|
 
+Note also, that GPUs have no need for registers.
 
-GPUs are quite general these days but they are still primarily optimized to handle graphics. So while they can also run parallel physics or neural networks, a dedicated physics processing unit or dedicated AI accelerators are still outperforming GPUs by a lot. The reason we do not see much of this yet is the ecosystem NVIDIA has built around their graphics cards and monopolizes. It will take time to build the software, workflows, hardware, and various integrations etc. for AI accelerators to take over. It will take even longer for this to happen for physics processors given that there is no clearly communicated demand for it on the market right now.
+GPUs are quite general these days but they are still primarily optimized to handle graphics. So while they can also run parallel physics or neural networks, a dedicated physics processing unit or dedicated AI accelerators are still outperforming GPUs by a lot. The reason we do not see much of this yet is the ecosystem NVIDIA has built around their graphics cards and monopolizes. Indeed, NVIDIA introduced a dedicated core to solve the computationally heavy task of ray-tracing a few years ago. It will take time to build the software, workflows, hardware, and various integrations etc. for AI accelerators to take over. It will take even longer for this to happen for physics processors given that there is no clearly communicated demand for it on the market right now. 
+
+
+
+<!--
+### Modern TPUs
+
+
+### Modern DPUs 
+-->
+
+<!-- GPU Verilog architecture. See:
++ https://github.com/adam-maj/tiny-gpu
+>
+
+<!--
+### SIMD vs. SIMT
++ https://www.reddit.com/r/computerarchitecture/comments/r0v4h2/explain_the_difference_between_simd_and_simt_like/
+
++ https://en.wikipedia.org/wiki/Single_instruction,_multiple_threads
+
++ https://www.youtube.com/watch?v=4Pi424VJgcE&list=PLxNPSjHT5qvscDTMaIAY9boOOXAJAS7y4
+-->
+
+<!--
+WORK THROUGH THIS ENTIRE SERIES!
+GET THE BOOK!
+
+https://www.youtube.com/watch?v=4Pi424VJgcE&list=PLxNPSjHT5qvscDTMaIAY9boOOXAJAS7y4
+
+-->
+
+<!--
+### Energy Considerations
+
+-->
+
+<!-- WORK THROUGH THESE LECTURES!
+1. https://www.youtube.com/watch?v=9nuAjYRbITQ
+2. https://www.youtube.com/watch?v=foCkCSZXOt8
+3. https://www.youtube.com/watch?v=BHMETwOXvWw
+
+>
 
 <!--
 ## Graphics Acceleration
@@ -69,3 +114,7 @@ Since there are so many other people who have already done quite similar project
   + Fluid Simulation?
 + Assemble the computer on breadboards or PCB (provide files). 
 -->
+
+<!-- TPU See: 
+https://github.com/eevaain/tiny-tpu/tree/main
+>
