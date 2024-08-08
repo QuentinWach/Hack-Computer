@@ -113,7 +113,7 @@ a > .hljs {
     margin: 0;
     flex: 1;
     white-space: nowrap;
-    overflow: hidden;
+    overflow: visible;
     text-overflow: ellipsis;
     white-space: normal;
     font-weight: 800;
@@ -443,7 +443,7 @@ ul#searchresults span.teaser em {
 .chapter li a.active {
     color: var(--sidebar-text-active);
     background: var(--sidebar-active);
-    border: 1px solid var(--sidebar-border-active);
+    border: 0px solid var(--sidebar-border-active);
     border-right-color: var(--bg);
 }
 
