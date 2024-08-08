@@ -26,7 +26,7 @@
     --bg: hsl(0, 0%, 100%);
     --fg: hsl(0, 0%, 0%);
 
-    --sidebar-bg:#ddd;
+    --sidebar-bg:#f6f7f6;
     --sidebar-fg: #111;
     --sidebar-non-existant: #aaaaaa;
     --sidebar-hover: #ccc;
