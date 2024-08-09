@@ -1,6 +1,5 @@
 # Overview
 - [Computer Basics: NAND to Pong](0_Overview.md)
-  - [Overview](0_Overview.md)
   - [Get Started](1_Get_Started.md)
   - [Boolean Arithmetic](2_Boolean_Arithmetic.md)
   - [Sequential Logic](3_Sequential_Logic.md)

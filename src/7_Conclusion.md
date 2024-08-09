@@ -31,7 +31,14 @@ Note also, that GPUs have no need for registers.
 
 GPUs are quite general these days but they are still primarily optimized to handle graphics. So while they can also run parallel physics or neural networks, a dedicated physics processing unit or dedicated AI accelerators are still outperforming GPUs by a lot. The reason we do not see much of this yet is the ecosystem NVIDIA has built around their graphics cards and monopolizes. Indeed, NVIDIA introduced a dedicated core to solve the computationally heavy task of ray-tracing a few years ago. It will take time to build the software, workflows, hardware, and various integrations etc. for AI accelerators to take over. It will take even longer for this to happen for physics processors given that there is no clearly communicated demand for it on the market right now. 
 
+### Parallelism: SISD to MIMD
+SIMD describes computers with multiple processing elements that perform the same operation on multiple data points simultaneously rather than "Single Instruction, Single Data" (SISD) as in the Hack computer we've built. Below is an illustration of the general idea layed out originally in [Flynn's Taxonomy](https://en.wikipedia.org/wiki/Single_instruction,_multiple_data):
 
+|![](SIMD.jpg)|
+| :-: |
+|Flynn's Taxonomy of (parallel) processing with single or multiple data or instructions.|
+
+GPUs are SIMD. And where the original computer and CPU was clearly SISD, modern CPUs, especially those used for supercomputers, are now typically MIMD, so that various different applications with different data can run in parallel. Yet, the complexity of such an architecture only allows for a relatively low number of cores compared to SIMD. Hence, ultra-parellilsm is only really feasable with SIMD.
 
 <!--
 ### Modern TPUs
